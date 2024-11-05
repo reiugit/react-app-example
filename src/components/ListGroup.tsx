@@ -1,14 +1,18 @@
 import { useState } from "react";
 
-function ListGroup() {
-  let items = ["Item 1", "Item 2", "Item 3", "Item 4"];
+interface Props {
+  title: string;
+  items: string[];
+}
+
+function ListGroup({ title, items }: Props) {
   //items = [];
 
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
   return (
     <>
-      <h3>ListGroup</h3>
+      <h3 className="mb-3">{title}</h3>
 
       {items.length === 0 && <p>No items</p>}
 
