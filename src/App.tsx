@@ -7,7 +7,11 @@ function App() {
     <div className="mx-5 my-4">
       <Greet name="Visitor" />
 
-      <Alert text="Example Alert-Text" />
+      <Alert>
+        Example Alert-Text
+        <br />
+        Line 2
+      </Alert>
 
       <ListGroup
         title="Available Fruits"
