@@ -8,6 +8,7 @@ function App() {
       <ListGroup
         title="Available Fruits"
         items={["Apple", "Banana", "Orange"]}
+        onSelectItem={(item) => console.log(item)}
       />
     </div>
   );
