@@ -1,21 +1,25 @@
-import Greet from "./Greet";
+import { useState } from "react";
 import Alert from "./components/Alert";
-import Buttons from "./components/Buttons/Buttons";
+import Button from "./components/Button";
 import ListGroup from "./components/ListGroup";
+import "./App.css";
 
 function App() {
+  const [isAlertVisible, setAlertVisibility] = useState(true);
+
+  const onAlertClose = () => setAlertVisibility(!isAlertVisible);
+
   return (
     <div className="mx-5 my-4">
-      <Greet name="Visitor" />
-      <Alert>
-        Example <b>Alert</b> with <i>HTML</i> content.{" "}
-      </Alert>
-      <Alert color="success">This is a success alert.</Alert>
-      <Buttons />
+      {isAlertVisible && (
+        <Alert onClose={onAlertClose}>3 fruits are available.</Alert>
+      )}
+
+      {!isAlertVisible && <Button label="Show info" onClick={onAlertClose} />}
+
       <ListGroup
         title="Available Fruits"
         items={["Apple", "Banana", "Orange"]}
-        onSelectItem={(item) => console.log(item)}
       />
     </div>
   );

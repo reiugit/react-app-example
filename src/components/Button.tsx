@@ -1,6 +1,6 @@
 interface Props {
   label: string;
-  color?: string;
+  color?: "primary" | "secondary" | "success" | "danger" | "warning" | "info";
   onClick: () => void;
 }
 
