@@ -1,5 +1,5 @@
-# Sample React App with Typescript
+# Sample React App with TypeScript
 
-Simple example:
+Simple example for React and TypeScript:
 * Close and reopen an alert
 * Select items in a listgroup
